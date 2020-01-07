@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  nginx:
-    image: nginx
+  web:
+    build: .
     restart: unless-stopped
     volumes:
       - ./data/nginx:/etc/nginx/conf.d
