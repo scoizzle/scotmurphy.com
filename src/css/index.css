@@ -1,0 +1,37 @@
+.card-img-top-logo {
+    padding: 15px;
+}
+
+@media (min-width: 576px) { 
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 768px) {     
+    #selfie {
+        display: inline;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 991.98px) { 
+    #selfie {
+        display: inline;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    .card-columns {
+        column-count: 3;
+    }
+}
