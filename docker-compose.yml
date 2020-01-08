@@ -2,7 +2,7 @@ version: '3'
 
 services:
   webserver:
-    image: nginx:mainline-alpine
+    build: .
     container_name: webserver
     restart: unless-stopped
     ports:
