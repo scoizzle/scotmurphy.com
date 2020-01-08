@@ -1,3 +1,5 @@
-FROM nginx:mainline-alpine
-RUN rm -r /usr/share/nginx/html
-COPY src /usr/share/nginx/html
+FROM nginx
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY ./nginx-conf/nginx.conf /etc/nginx/conf.d/webserver.conf
+COPY ./src /usr/share/nginx/html
