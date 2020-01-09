@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: resume
+  labels:
+    run: resume
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    run: resume
+---    
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume
+  labels:
+    app: resume
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resume
+  template:
+    metadata:
+      labels:
+        app: resume
+    spec:
+      containers:
+        - name: resume
+          image: scoizzle/resume:latest
+          ports:
+            - containerPort: 80
