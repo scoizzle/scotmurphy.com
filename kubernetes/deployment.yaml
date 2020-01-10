@@ -1,33 +1,31 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: resume
-  labels:
-    run: resume
+  name: resume-service
 spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 80
-    protocol: TCP
   selector:
-    run: resume
+    app: resume-nginx
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
 ---    
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: resume
+  name: resume-nginx
   labels:
-    app: resume
+    app: resume-nginx
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: resume
+      app: resume-nginx
   template:
     metadata:
       labels:
-        app: resume
+        app: resume-nginx
     spec:
       containers:
         - name: resume
