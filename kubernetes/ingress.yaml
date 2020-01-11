@@ -6,26 +6,23 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: www.scotmurphy.com
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: resume-service
-          servicePort: 80
-      - path: /api/
-        backend:
-            serviceName: testing-api-service
-            servicePort: 80
   - host: scotmurphy.com
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: resume-service
           servicePort: 80
-      - path: /api/
-        backend:
-            serviceName: testing-api-service
-            servicePort: 80
-        
+
+  - host: www.scotmurphy.com
+    http:
+      paths:
+      - backend:
+          serviceName: resume-service
+          servicePort: 80
+
+  - host: api.scotmurphy.com
+    http:
+      paths:
+      - backend:
+          serviceName: testing-api-service
+          servicePort: 80
