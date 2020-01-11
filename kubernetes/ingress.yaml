@@ -17,4 +17,15 @@ spec:
         backend:
             serviceName: testing-api-service
             servicePort: 80
+  - host: scotmurphy.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: resume-service
+          servicePort: 80
+      - path: /api/
+        backend:
+            serviceName: testing-api-service
+            servicePort: 80
         
