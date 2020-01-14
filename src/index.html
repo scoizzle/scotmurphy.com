@@ -90,6 +90,154 @@
                         <p class="card-text">Basic bootstrap with minimal tweaks.</p>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a href="https://github.com/scoizzle/TestingApi"><i class="fab fa-github"></i> /
+                            Testing Api</a>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">An example REST api built using asp.net core.</h5>
+                        <p class="card-text"><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#nicknamePrompt">Demo</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="nicknamePrompt" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container-fluid"><form>
+                            <div class="form-group form-row">
+                              <label for="colFormLabelSm" class="col-sm-2 col-form-label">Channel Name</label>
+                              <div class="col-sm-10">
+                                <input type="text" id="channel" class="form-control" id="colFormLabelSm" placeholder="Channel" value="Testing">
+                              </div>
+                            </div>
+                            <div class="form-group form-row">
+                              <label for="colFormLabel" class="col-sm-2 col-form-label">Nickname</label>
+                              <div class="col-sm-10">
+                                <input type="text" id="nickname" class="form-control" id="colFormLabel" placeholder="Nickname" value="Tester">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer text-right">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            Cancel</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chat-ui">
+                            Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="chat-ui" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl chat-ui-modal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="chat-ui-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container-fluid" id="conversation">
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-2">Sender</div>
+                                <div class="col-md-10">Message</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="chat-ui-message" placeholder="Message">
+                            <div class="input-group-append">
+                              <button class="btn btn-primary" type="button" id="chat-ui-send">Send</button>
+                            </div>
+                          </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -265,9 +413,9 @@
     </main>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

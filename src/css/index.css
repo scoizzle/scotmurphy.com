@@ -2,6 +2,15 @@
     padding: 15px;
 }
 
+.modal-dialog{
+    overflow-y: initial !important
+}
+
+.modal-body{
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
 @media print {
     .pageBreak {
         page-break-before: always;
