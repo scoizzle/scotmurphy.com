@@ -1,0 +1,30 @@
+{
+    "name": "scotmurphy.com - Jekyll Blog",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [4000],
+    "portsAttributes": {
+        "4000": {
+            "label": "Jekyll Preview",
+            "onAutoForward": "notify"
+        }
+    },
+    "postCreateCommand": "bundle install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "yzhang.markdown-all-in-one",
+                "bierner.markdown-preview-github-styles",
+                "davidanson.vscode-markdownlint"
+            ],
+            "settings": {
+                "files.associations": {
+                    "**/_posts/*.md": "markdown",
+                    "**/_layouts/*.html": "html"
+                }
+            }
+        }
+    }
+}

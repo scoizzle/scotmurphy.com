@@ -1,0 +1,25 @@
+# Site settings
+title: "Scot Murphy"
+description: "Personal site and blog — software engineering, distributed systems, and .NET"
+url: "https://scotmurphy.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - docs/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /:year/:month/:day/:title/
