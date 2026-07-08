@@ -10,9 +10,6 @@ RUN apt-get update && \
       npm \
       && rm -rf /var/lib/apt/lists/*
 
-# Install the github-pages gem (includes Jekyll and all Pages-compatible plugins)
-RUN gem install github-pages webrick
-
 # Working directory
 WORKDIR /workspace
 

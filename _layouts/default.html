@@ -18,6 +18,23 @@
         pre { background: #f8f9fa; padding: 1rem; border-radius: 4px; overflow-x: auto; }
         code { font-size: 0.9em; }
     </style>
+    <!-- Mermaid diagram rendering (client-side via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Convert ```mermaid fenced code blocks to mermaid-compatible divs
+        document.querySelectorAll('pre code.language-mermaid').forEach(function(elem) {
+          var pre = elem.parentElement;
+          var div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = elem.textContent;
+          pre.parentNode.replaceChild(div, pre);
+        });
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.initialize({ startOnLoad: true });
+        }
+      });
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

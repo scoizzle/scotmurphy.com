@@ -43,6 +43,7 @@ The framing that helped: a transaction boundary is control-plane machinery. When
 
 How the objects lined up in our stack — call sites and in-database things, each able to finalize something:
 
+{% raw %}
 ```mermaid
 flowchart TB
   subgraph outside [Outside the database]
@@ -83,6 +84,7 @@ flowchart TB
   style outside fill:#020617,stroke:#334155,color:#94a3b8
   style inside fill:#020617,stroke:#334155,color:#94a3b8
 ```
+{% endraw %}
 
 ## Where it actually hurt
 
