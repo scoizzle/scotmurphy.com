@@ -23,3 +23,6 @@ defaults:
     values:
       layout: post
       permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-mermaid
